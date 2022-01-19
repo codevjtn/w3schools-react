@@ -44,5 +44,11 @@ function Garage() {
   );
 }
 
-ReactDOM.render(<Garage />, document.getElementById("root"));
-ReactDOM.render(<Garages />, document.getElementById("root"));
+ReactDOM.render(
+  <React.Fragment>
+    <Garage />
+    <Garages />
+  </React.Fragment>,
+  document.getElementById("root")
+);
+//ReactDOM.render(<Garages />, document.getElementById("root"));
