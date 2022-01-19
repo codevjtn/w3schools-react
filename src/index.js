@@ -8,6 +8,23 @@ function Car(props) {
     </li>
   );
 }
+function Cars(props) {
+  return <li>I am a {props.brand}</li>;
+}
+
+function Garages() {
+  const cars = ["Ford", "BMW", "Audi"];
+  return (
+    <>
+      <h1>Who lives in my garage?</h1>
+      <ul>
+        {cars.map((car) => (
+          <Cars brand={car} />
+        ))}
+      </ul>
+    </>
+  );
+}
 
 function Garage() {
   const cars = [
@@ -28,3 +45,4 @@ function Garage() {
 }
 
 ReactDOM.render(<Garage />, document.getElementById("root"));
+ReactDOM.render(<Garages />, document.getElementById("root"));
