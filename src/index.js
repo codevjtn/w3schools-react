@@ -4,6 +4,9 @@ import message from "./message.js";
 import Carpropsjs from "./carprops.js";
 const myArray = ["apple", "banana", "orange"];
 import Garagecar from "./garage.js";
+import Carstates from "./state-car.js";
+import Carchangestate from "./state-change-color.js";
+
 const myList = myArray.map((item) => <p>{item}</p>);
 const numbers = [1, 2, 3, 4, 5, 6];
 
@@ -80,6 +83,8 @@ ReactDOM.render(
     <Carsprop color="red" />
     <Carpropsjs model="Ford" />
     <Garagecar />
+    <Carstates />
+    <Carchangestate />
     {myList}
     {one}
     {two}
