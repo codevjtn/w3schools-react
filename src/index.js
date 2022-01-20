@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom";
 import React from "react";
 import message from "./message.js";
-
+import Carpropsjs from "./carprops.js";
 const myArray = ["apple", "banana", "orange"];
 
 const myList = myArray.map((item) => <p>{item}</p>);
@@ -65,11 +65,21 @@ function Garage() {
   );
 }
 
+class Carsprop extends React.Component {
+  render() {
+    return <h2>I am a {this.props.color} Car!</h2>;
+  }
+}
+const myelement = React.createElement("h1", {}, "I do not use JSX!");
 ReactDOM.render(
   <React.Fragment>
     <Garage />
     <Garages />
     {message()}
+    {myelement}
+    <Carsprop color="red" />
+    <Carpropsjs model="Ford" />
+
     {myList}
     {one}
     {two}
